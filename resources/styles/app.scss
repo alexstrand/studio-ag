@@ -1,0 +1,11 @@
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme styles */
+@import 'common/reset';
+@import 'common/fonts';
+@import 'common/typography';
+
+@import 'sections/navigation';

@@ -6,7 +6,7 @@ const config = {
       colors: {
         'black': '#2A2B2A',
         'yellow': '#FFBD52',
-        'white': '#F6EADF',
+        'beige': '#F6EADF',
         'red': '#D35845',
         'green': '#154734',
         'pink': '#EFBDBF'

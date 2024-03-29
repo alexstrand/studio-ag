@@ -1,0 +1,19 @@
+/* Typography */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Serif Display', 'Times New Roman', Times, serif;
+  line-height: 1.2;
+}
+
+.hero-text {
+  font-size: clamp(1.563rem, 25.862vw - 15.022rem, 4.375rem); /* 25 -> 95 */
+}
+
+p {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.btn {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}

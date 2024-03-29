@@ -36,7 +36,7 @@
           "slug": "black"
         },
         {
-          "color": "#f6eadf",
+          "color": "#fff",
           "name": "White",
           "slug": "white"
         },
@@ -1049,6 +1049,11 @@
           "color": "#4c0519",
           "name": "Rose 950",
           "slug": "rose-950"
+        },
+        {
+          "color": "#f6eadf",
+          "name": "Beige",
+          "slug": "beige"
         }
       ]
     },

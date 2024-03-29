@@ -1,0 +1,39 @@
+/* Fonts */
+
+/* Noto Serif Display */
+@font-face {
+  font-family: 'Noto Serif Display';
+  src:  url('~@fonts/notoserifdisplay-variablefont_wdthwght-webfont.woff2') format('woff2'),
+        url('~@fonts/notoserifdisplay-variablefont_wdthwght-webfont.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Poppins Light */
+@font-face {
+  font-family: 'Poppins';
+  src:  url('~@fonts/poppins-light-webfont.woff2') format('woff2'),
+        url('~@fonts/poppins-light-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Poppins Regular */
+@font-face {
+  font-family: 'Poppins';
+  src:  url('~@fonts/poppins-regular-webfont.woff2') format('woff2'),
+        url('~@fonts/poppins-regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Montserrat */
+@font-face {
+  font-family: 'Montserrat';
+  src:  url('~@fonts/montserrat-variablefont_wght-webfont.woff2') format('woff2'),
+        url('~@fonts/montserrat-variablefont_wght-webfont.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
+}
