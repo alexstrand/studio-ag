@@ -34,7 +34,7 @@ export default async (app) => {
    */
   app
     .setUrl('http://localhost:10018')
-    .setProxyUrl('http://example.test')
+    .setProxyUrl('http://localhost:10018')
     .watch(['resources/views', 'app']);
 
   /**

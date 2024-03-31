@@ -21,7 +21,7 @@
     <div class="w-full md:w-5/12 md:mr-auto pb-7 md:pb-0">
       <x-image 
         image="{{ @asset('images/johanna-flowers.png') }}"
-        ratio="120"
+        ratio="110"
         position="top" 
       />
     </div>

@@ -1,0 +1,26 @@
+/* Buttons */
+.btn {
+  background-color: $green;
+  padding: 1rem 2rem;
+  transition: $transition-base;
+  border: 1px solid $green;
+
+  &:hover,
+  &:focus {
+    background-color: white;
+
+    > a,
+    > span {
+      color: $green;
+    }
+  }
+
+  > a,
+  > span {
+    display: block;
+    text-align: center;
+    color: white;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+}

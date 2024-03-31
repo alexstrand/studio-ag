@@ -6,10 +6,10 @@
 
 <div class="btn-wrapper flex justify-center items-center">
   <a
-    {{ $attributes->merge(['class' => 'btn group bg-green hover:bg-white text-base py-4 px-8 border-green border-2 transition-all']) }}
+    {{ $attributes->merge(['class' => 'btn']) }}
     href="{{ $url }}"
   >
-    <span class="btn-text text-white group-hover:text-green uppercase transition-all">
+    <span class="btn-text">
       {!! $text !!}
     </span>
   </a>

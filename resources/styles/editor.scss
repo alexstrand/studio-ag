@@ -5,5 +5,8 @@
 
 /* Theme styles */
 @import 'common/reset';
+@import 'common/variables';
 @import 'common/fonts';
 @import 'common/typography';
+
+@import 'components/buttons';

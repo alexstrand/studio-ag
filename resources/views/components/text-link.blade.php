@@ -6,9 +6,9 @@
 
 @if($text && $url)
   <a
-    class="text-link relative after:absolute after:bottom-[-10px] after:left-0 after:h-[2px] after:w-full after:bg-black hover:after:w-0 focus:after:w-0 after:transition-all"
+    class="text-link relative after:absolute after:bottom-[-10px] after:left-0 after:h-[2px] after:w-0 after:bg-black hover:after:w-full focus:after:w-full after:transition-all after:duration-300"
     href="{{ $url }}"
   >
-    {{ $text }}
+    {{ $text }} <i class="fa-solid fa-angles-right ml-[2px]"></i>
   </a>
 @endif

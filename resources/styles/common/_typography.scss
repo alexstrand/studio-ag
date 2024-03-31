@@ -1,5 +1,14 @@
 /* Typography */
 
+body {
+  color: $black;
+}
+
+.brand {
+  font-family: 'Style Script';
+  font-size: clamp(1.375rem, 1.488vw + 0.661rem, 2rem);
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Noto Serif Display', 'Times New Roman', Times, serif;
   line-height: 1.2;
@@ -43,6 +52,7 @@ p {
 }
 
 .subtitle {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   font-size: clamp(0.75rem, 0.298vw + 0.607rem, 0.875rem); /* 12 - 14 */
 }
 

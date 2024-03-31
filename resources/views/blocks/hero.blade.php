@@ -12,7 +12,7 @@
 --}}
 
 <x-section 
-  class="hero bg-beige py-14 md:pb-24 md:pt-28"
+  class="hero bg-beige pb-14 md:pb-24 pt-20 md:pt-32"
   aria-label="Headline here"
 >
   <x-content-wrapper class="flex items-center">
@@ -27,14 +27,13 @@
         att hjälpa dina klienter
       </h1>
 
-      <div class="md:w-11/12 ml-auto pt-8">
+      <div class="md:pl-8 ml-auto pt-6">
         <p>
-          Det du brinner för som wellness coach eller femmeprenör att faktiskt ha tid till att hjälpa andra, men som egenföretagare så finns det många tidstjuvar. Tänk dig att slippa känna dig överväldigad med att driva ditt företag och istället skapa tid för att fokusera på dina klienter?
-  Då finns jag här för dig!
-  Tillsammans kommer vi fram till den bästa lösningen så att du kan leva din sanning & driva ditt mission med stor glädje!
+          Det du brinner för som wellness coach eller femmeprenör att faktiskt ha tid till att hjälpa andra, men som egenföretagare så finns det många tidstjuvar. Tänk dig att slippa känna dig överväldigad med att driva ditt företag och istället skapa tid för att fokusera på dina klienter?<br><br>
+          Då finns jag här för dig!
         </p>
   
-        <div class="btn-group flex items-center pt-8">
+        <div class="btn-group flex items-start pt-7">
           <x-button
             class="mb-4 md:mb-0 mr-4"
             text="Example button"
@@ -50,10 +49,10 @@
       </div>
 
     {{-- Hero image content --}}
-    <div class="w-full md:w-5/12 md:ml-auto">
+    <div class="w-full hidden md:block md:w-5/12 md:ml-auto">
       <x-image 
         image="{{ @asset('images/test-johanna.png') }}"
-        ratio="120" 
+        ratio="110" 
       />
     </div>
 
