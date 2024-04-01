@@ -24,7 +24,7 @@
       <h2 class="pb-7">Jag tar hand om dina tråkiga uppgifter
         som lägger sig på hög i ditt schema,
         så att du kan fokusera på de viktiga
-        sakerna som <em class="text-red">kurser</em></h2>
+        sakerna som <span class="text-carousel"><div class="carousel-item">kurser</div><div class="carousel-item">data entry</div><div class="carousel-item">baking</div><div class="carousel-item">sexy tajm</div></span></h2>
       
       <x-text-link text="LÅT OSS LÄRA KÄNNA VARANDRA" url="#" />
     </div>

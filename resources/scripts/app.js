@@ -17,6 +17,7 @@ domReady(async () => {
   const header = document.getElementById('header');
   const hamburgerTrigger = document.getElementById('hamburger-trigger');
   const navigationPrimary = document.querySelector('header .nav-primary');
+  const textCarousels = document.querySelectorAll('.text-carousel');
   
   /**
    * Event listeners
@@ -40,6 +41,55 @@ domReady(async () => {
     pageScroll();
   });
 
+  /**
+   * Text carousel 
+   */
+  textCarousels.forEach((carousel, i) => {
+    let carouselTexts = carousel.querySelectorAll('.carousel-item');
+
+    // Init
+    carouselTexts.forEach((carouselText, i) => {
+      carouselTexts[0].classList.add('active');
+      carouselTexts[1].classList.add('next');
+    });
+
+    // Carousel functionality
+    window.setInterval(function(){
+      let totalSlides = carouselTexts.length;
+      let nextSlide = carousel.querySelector('.next');
+      let lastSlide = carouselTexts[totalSlides - 1];
+
+      // If next is first item
+      if (nextSlide == carouselTexts[0]) {
+        nextSlide.classList.add('active');
+        nextSlide.classList.remove('next');
+
+        lastSlide.classList.remove('active');
+        nextSlide.nextElementSibling.classList.add('next');
+
+        return;
+      }
+
+      // If next is final item
+      if (nextSlide == lastSlide) {
+        nextSlide.classList.add('active');
+        nextSlide.classList.remove('next');
+
+        lastSlide.previousElementSibling.classList.remove('active');
+        carouselTexts[0].classList.add('next');
+        console.log("final");
+        return;
+      }
+
+      nextSlide.classList.add('active');
+      nextSlide.classList.remove('next');
+
+      nextSlide.previousElementSibling.classList.remove('active');
+      nextSlide.nextElementSibling.classList.add('next');
+      
+      return;
+    }, 2000);
+  });
 });
 
 /**

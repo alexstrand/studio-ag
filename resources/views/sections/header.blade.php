@@ -1,7 +1,7 @@
 <header id="header" class="banner w-full fixed z-[100] left-0 {{ is_user_logged_in() ? 'top-[46px] md:top-8' : 'top-0' }} [&.scrolled]:bg-beige py-2 md:py-7 [&.scrolled]:md:py-4 transition-all duration-300">
   <x-content-wrapper class="w-full flex items-center justify-between md:justify-start">
-    <a class="brand text-black italic relative z-10 mr-16 font-bold text-2xl" href="{{ home_url('/') }}">
-      {!! $siteName !!}
+    <a class="brand relative z-10 md:mr-16 transition-all duration-300" href="{{ home_url('/') }}">
+      <img src="@asset('images/studio-ag-logo.svg')" alt="Studio AG logga" />
     </a>
   
     @if (has_nav_menu('primary_navigation'))
