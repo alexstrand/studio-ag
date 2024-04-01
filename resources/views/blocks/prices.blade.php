@@ -32,16 +32,19 @@
         slidesPerView="3"
         spaceBetween="30"
       >
-        @php($prices = [1,1,1])
+        @php($prices = ['Lilla','Mellan','Stora'])
 
-        @foreach($prices as $price)
-          <li class="swiper-slide price bg-green text-white shadow-lg px-8 py-12">            
-            <h3 class="text-center">Lilla</h3>
+        @foreach($prices as $key => $value)
+          <li class="swiper-slide price bg-green text-white shadow-lg px-8 py-16">            
+            <h3 class="text-center">{{ $value }}</h3>
 
-            <hr class="my-7">
+            <hr class="max-w-[200px] mx-auto my-7">
 
-            <p class="text-center pb-2">20h / mån</p>
-            <p class="text-center pb-7">16 000 kr ex moms</p>
+            <div class="text-center">
+              <p>20h / mån</p>
+              <p>-</p>
+              <p class="pb-7">16 000 kr ex moms</p>
+            </div>
 
             <x-button 
               text="Jag behöver detta!"

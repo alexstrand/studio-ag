@@ -1,0 +1,46 @@
+/* Footer */
+/* Navigation */
+footer {
+  nav {
+    > div {
+      width: 100%;
+
+      ul.nav {
+        width: 100%;
+
+        li {
+          &:not(.btn) {
+            padding: 0 0 1rem 0;
+
+            @media screen and (min-width: $md) {
+              padding: 0 .5rem;
+            }
+            
+            a {
+              text-transform: uppercase;
+              position: relative;
+      
+              &:hover,
+              &:focus {
+                &::after {
+                  width: 100%;
+                }
+              }
+      
+              &::after {
+                content: '';
+                transition: $transition-base;
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: -10px;
+                left: 0;
+                background-color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

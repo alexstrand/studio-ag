@@ -13,11 +13,13 @@
       <nav class="nav-footer pb-7 w-full md:flex md:flex-row md:justify-between md:items-center" aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}">
         {!! wp_nav_menu([
           'theme_location' => 'footer_navigation',
-          'menu_class' => 'nav flex flex-col w-full md:flex-row items-center justify-between',
+          'menu_class' => 'nav flex flex-col w-full md:flex-row items-center justify-center',
           'echo' => false
         ]) !!}
       </nav>
     @endif
+
+    {{-- Socials --}}
 
     <p class="w-full text-center">© Studio AG {{ date("Y") }}</p>
   </x-content-wrapper>
