@@ -23,4 +23,19 @@
     line-height: 1;
     text-transform: uppercase;
   }
+
+  &.alt {
+    background-color: $red;
+    border-color: $red;
+
+    &:hover,
+    &:focus {
+      background-color: white;
+      
+      > a,
+      > span {
+        color: $red;
+      }
+    }
+  }
 }

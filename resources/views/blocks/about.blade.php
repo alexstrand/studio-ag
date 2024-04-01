@@ -12,7 +12,7 @@
 --}}
 
 <x-section 
-  class="hero bg-beige py-14 md:pb-24 md:pt-28"
+  class="hero bg-beige py-14 md:py-24"
   aria-label="Om Studio AG"
 >
   <x-content-wrapper class="md:flex md:items-center md:flex-row-reverse">

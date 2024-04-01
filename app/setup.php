@@ -15,6 +15,17 @@ use function Roots\bundle;
  */
 add_action('wp_enqueue_scripts', function () {
     bundle('app')->enqueue();
+
+    // Swiper JS
+    wp_enqueue_script(
+        'swiper-js',
+        get_template_directory_uri().'/includes/js/swiper/swiper-bundle.min.js',
+        [],
+        '1.0.0',
+        [
+            'strategy' => 'defer',
+        ]
+    );
 }, 100);
 
 /**
@@ -46,6 +57,7 @@ add_action('after_setup_theme', function () {
      */
     register_nav_menus([
         'primary_navigation' => __('Primary Navigation', 'sage'),
+        'footer_navigation' => __('Footer Navigation', 'sage'),
     ]);
 
     /**

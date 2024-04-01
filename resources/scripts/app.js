@@ -1,9 +1,18 @@
 import domReady from '@roots/sage/client/dom-ready';
+
+// Swiper import
+import Swiper from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+// Font awesome import
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import { faAnglesRight } from '@fortawesome/free-solid-svg-icons';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 // Font awesome
-library.add(faAnglesRight);
+library.add(faAnglesRight, faCheck);
 dom.watch();
 
 /**
@@ -77,7 +86,6 @@ domReady(async () => {
 
         lastSlide.previousElementSibling.classList.remove('active');
         carouselTexts[0].classList.add('next');
-        console.log("final");
         return;
       }
 
