@@ -13,47 +13,49 @@
 
 <x-section 
   class="hero bg-beige pb-14 md:pb-24 pt-24 md:pt-36"
-  aria-label="Headline here"
+  aria-label="Välkommen till Studio AG"
 >
   <x-content-wrapper class="flex items-center">
 
     {{-- Hero text content --}}
     <div class="w-full md:w-6/12 text-black">
-      <h1 class="text-h2">
-        Hej, jag är Johanna!<br>
-        Din virtuella assistent
-        som avlastar dig
-        medan du fokuserar på
-        att hjälpa dina klienter
-      </h1>
+      <h1 class="text-h2">{!! get_field('headline') !!}</h1>
 
       <div class="md:pl-8 ml-auto pt-6">
-        <p>
-          Det du brinner för som wellness coach eller femmeprenör att faktiskt ha tid till att hjälpa andra, men som egenföretagare så finns det många tidstjuvar. Tänk dig att slippa känna dig överväldigad med att driva ditt företag och istället skapa tid för att fokusera på dina klienter?<br><br>
-          Då finns jag här för dig!
-        </p>
+        <p>{!! get_field('text') !!}</p>
   
-        <div class="btn-group flex items-start pt-7">
-          <x-button
-            class="mb-4 md:mb-0 mr-4"
-            text="Example button"
-            url="#"
-          />
-  
-          <x-button
-            text="Example button"
-            url="#"
-          />
-        </div>
+        @if(get_field('button_1_text') or get_field('button_1_text') && get_field('button_2_text'))
+          <div class="btn-group flex items-start pt-7">
+
+            @if(get_field('button_1_text') && get_field('button_1_url'))
+              <x-button
+                class="mb-4 md:mb-0 mr-4"
+                text="{{ get_field('button_1_text') }}"
+                url="{{ get_the_permalink(get_field('button_1_url')) }}"
+              />
+            @endif
+    
+            @if(get_field('button_2_text') && get_field('button_2_url'))
+              <x-button
+                text="{{ get_field('button_2_text') }}"
+                url="{{ get_the_permalink(get_field('button_2_url')) }}"
+              />
+            @endif
+
+          </div>
+        @endif
+
       </div>
-      </div>
+    </div>
 
     {{-- Hero image content --}}
     <div class="w-full hidden md:block md:w-5/12 md:ml-auto">
-      <x-image 
-        image="{{ @asset('images/test-johanna.png') }}"
-        ratio="110" 
-      />
+      @if(get_field('image'))
+        <x-image 
+          image="{{ get_field('image') }}"
+          ratio="110" 
+        />
+      @endif
     </div>
 
   </x-content-wrapper>

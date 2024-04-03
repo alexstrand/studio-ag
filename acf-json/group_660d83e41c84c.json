@@ -1,34 +1,9 @@
 {
-    "key": "group_66098f23c9f1a",
-    "title": "Block: Image &amp; text",
+    "key": "group_660d83e41c84c",
+    "title": "Block: About",
     "fields": [
         {
-            "key": "field_66098f2331c93",
-            "label": "Image orientation",
-            "name": "image_orientation",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "left": "Left",
-                "right": "Right"
-            },
-            "default_value": "",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "layout": "vertical",
-            "save_other_choice": 0
-        },
-        {
-            "key": "field_660d7c43b8a2b",
+            "key": "field_660d83e41e5e0",
             "label": "Intro headline",
             "name": "intro_headline",
             "aria-label": "",
@@ -48,7 +23,7 @@
             "append": ""
         },
         {
-            "key": "field_660d7c4fb8a2c",
+            "key": "field_660d83e41e5e3",
             "label": "Headline",
             "name": "headline",
             "aria-label": "",
@@ -68,7 +43,7 @@
             "new_lines": "br"
         },
         {
-            "key": "field_660d7cfbb8a2f",
+            "key": "field_660d83e41e5e7",
             "label": "Text",
             "name": "text",
             "aria-label": "",
@@ -88,7 +63,7 @@
             "new_lines": "br"
         },
         {
-            "key": "field_660d7c60b8a2d",
+            "key": "field_660d83e41e5ea",
             "label": "Button text",
             "name": "button_text",
             "aria-label": "",
@@ -108,7 +83,7 @@
             "append": ""
         },
         {
-            "key": "field_660d7c6eb8a2e",
+            "key": "field_660d83e41e5ed",
             "label": "Button URL",
             "name": "button_url",
             "aria-label": "",
@@ -134,7 +109,7 @@
             "bidirectional_target": []
         },
         {
-            "key": "field_660d7d10b8a30",
+            "key": "field_660d83e41e5f0",
             "label": "Image",
             "name": "image",
             "aria-label": "",
@@ -164,7 +139,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/image-text"
+                "value": "acf\/about"
             }
         ]
     ],
@@ -177,5 +152,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712160400
+    "modified": 1712161780
 }

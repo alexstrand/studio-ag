@@ -1,54 +1,9 @@
 {
-    "key": "group_66098f23c9f1a",
-    "title": "Block: Image &amp; text",
+    "key": "group_660d75469f641",
+    "title": "Block: Hero (page intro)",
     "fields": [
         {
-            "key": "field_66098f2331c93",
-            "label": "Image orientation",
-            "name": "image_orientation",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "left": "Left",
-                "right": "Right"
-            },
-            "default_value": "",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "layout": "vertical",
-            "save_other_choice": 0
-        },
-        {
-            "key": "field_660d7c43b8a2b",
-            "label": "Intro headline",
-            "name": "intro_headline",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_660d7c4fb8a2c",
+            "key": "field_660d754621fc8",
             "label": "Headline",
             "name": "headline",
             "aria-label": "",
@@ -68,7 +23,7 @@
             "new_lines": "br"
         },
         {
-            "key": "field_660d7cfbb8a2f",
+            "key": "field_660d756c21fc9",
             "label": "Text",
             "name": "text",
             "aria-label": "",
@@ -88,9 +43,9 @@
             "new_lines": "br"
         },
         {
-            "key": "field_660d7c60b8a2d",
-            "label": "Button text",
-            "name": "button_text",
+            "key": "field_660d758721fca",
+            "label": "Button 1 text",
+            "name": "button_1_text",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -108,9 +63,9 @@
             "append": ""
         },
         {
-            "key": "field_660d7c6eb8a2e",
-            "label": "Button URL",
-            "name": "button_url",
+            "key": "field_660d75b921fcb",
+            "label": "Button 1 URL",
+            "name": "button_1_url",
             "aria-label": "",
             "type": "post_object",
             "instructions": "",
@@ -134,7 +89,53 @@
             "bidirectional_target": []
         },
         {
-            "key": "field_660d7d10b8a30",
+            "key": "field_660d75ec21fcc",
+            "label": "Button 2 text",
+            "name": "button_2_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_660d75fa21fcd",
+            "label": "Button 2 URL",
+            "name": "button_2_url",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "post_status": "",
+            "taxonomy": "",
+            "return_format": "id",
+            "multiple": 0,
+            "allow_null": 0,
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_660d770c16ba7",
             "label": "Image",
             "name": "image",
             "aria-label": "",
@@ -164,7 +165,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/image-text"
+                "value": "acf\/hero"
             }
         ]
     ],
@@ -177,5 +178,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712160400
+    "modified": 1712159122
 }

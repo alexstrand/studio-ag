@@ -13,20 +13,32 @@
 
 <x-section 
   class="cta bg-white py-14 md:py-24 overflow-hidden"
-  aria-label="Headline here"
+  aria-label="{{ get_field('intro_headline') }}"
 >
   <x-content-wrapper class="text-center w-full relative z-10">
 
     {{-- CTA content --}}
     <div class="max-w-[1000px] mx-auto">
-      <x-subtitle text="VIRTUELL FÖRETAGSSUPPORT" />
+      <x-subtitle text="{{ get_field('intro_headline') }}" />
 
-      <h2 class="pb-7">Jag tar hand om dina tråkiga uppgifter
-        som lägger sig på hög i ditt schema,
-        så att du kan fokusera på de viktiga
-        sakerna som <span class="text-carousel"><div class="carousel-item">kurser</div><div class="carousel-item">data entry</div><div class="carousel-item">baking</div><div class="carousel-item">sexy tajm</div></span></h2>
+      <h2 class="pb-7">
+        {{ get_field('headline') }}
+        @if(get_field('carousel_words'))
+          <span class="text-carousel">
+            @foreach(get_field('carousel_words') as $word)
+              <div class="carousel-item">{{ $word['word'] }}</div>
+            @endforeach
+
+          </span>
+        @endif
+      </h2>
       
-      <x-text-link text="LÅT OSS LÄRA KÄNNA VARANDRA" url="#" />
+      @if(get_field('link_text') && get_field('link_url'))
+        <x-text-link 
+          text="{{ get_field('link_text') }}" 
+          url="{{ get_the_permalink(get_field('link_url')) }}"
+        />
+      @endif
     </div>
 
   </x-content-wrapper>

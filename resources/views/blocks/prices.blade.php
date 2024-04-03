@@ -13,16 +13,20 @@
 
 <x-section-image
   class="prices bg-white py-14 md:py-24 overflow-hidden"
-  aria-label="Studio AG priserna"
-  image="{{ @asset('images/johanna-with-indy.png') }}"
+  aria-label="{{ get_field('headline') }}"
+  image="{{ get_field('background_image') }}"
 >
   <x-content-wrapper class="w-full relative z-10">
 
     {{-- CTA content --}}
     <div class="max-w-[1000px] mx-auto text-center">
-      <h2 class="pb-7">Priser</h2>      
+      @if(get_field('intro_headline'))
+        <x-subtitle text="{{ get_field('intro_headline') }}" />
+      @endif
 
-      <p class="pb-7 md:w-8/12 md:mx-auto">Känner du dig osäker på vilken lösning som passar dig bäst? Skicka mig ett meddelande så löser vi det tillsammans!</p>
+      <h2 class="pb-7">{{ get_field('headline') }}</h2>      
+
+      <p class="pb-7 md:w-8/12 md:mx-auto">{!! get_field('text') !!}</p>
     </div>
 
     {{-- Services / Tjänster --}}
@@ -32,25 +36,30 @@
         slidesPerView="3"
         spaceBetween="30"
       >
-        @php($prices = ['Lilla','Mellan','Stora'])
+        @php($prices = get_field('prices') ?? array())
 
-        @foreach($prices as $key => $value)
+        @foreach($prices as $key => $price)
           <li class="swiper-slide price bg-green text-white shadow-lg px-8 py-16">            
-            <h3 class="text-center">{{ $value }}</h3>
+            <h3 class="text-center">{{ $price['title'] ?? null }}</h3>
 
             <hr class="max-w-[200px] mx-auto my-7">
 
             <div class="text-center">
-              <p>20h / mån</p>
+              <p>{{ $price['info_text'] ?? null }}</p>
               <p>-</p>
-              <p class="pb-7">16 000 kr ex moms</p>
+              <p class="pb-7">{{ $price['price'] ?? null }}</p>
             </div>
 
-            <x-button 
-              text="Jag behöver detta!"
-              url="#"
-              class="alt"
-            />
+            @php($buttonText = $price['button_text'] ?? null)
+            @php($buttonUrl = $price['button_url'] ?? null)
+
+            @if($buttonText && $buttonUrl)
+              <x-button 
+                text="{{ $buttonText }}"
+                url="{{ get_the_permalink($buttonUrl) }}"
+                class="alt"
+              />
+            @endif
           </li>
         @endforeach
 
