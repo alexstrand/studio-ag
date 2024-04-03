@@ -26,7 +26,7 @@
 
       <h2 class="pb-7">{{ get_field('headline') }}</h2>      
 
-      <p class="pb-7 md:w-8/12 md:mx-auto">{!! get_field('text') !!}</p>
+      <div class="e-content pb-7 md:w-8/12 md:mx-auto">{!! get_field('text') !!}</div>
     </div>
 
     {{-- Services / Tjänster --}}

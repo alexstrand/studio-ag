@@ -16,7 +16,8 @@ export default async (app) => {
   app
     .entry('app', ['@scripts/app', '@styles/app'])
     .entry('editor', ['@scripts/editor', '@styles/editor'])
-    .assets(['images']);
+    .assets(['images'])
+    .assets(['fonts']);
 
   /**
    * Set public path
@@ -34,7 +35,7 @@ export default async (app) => {
    */
   app
     .setUrl('http://localhost:10018')
-    .setProxyUrl('http://localhost:10018')
+    .setProxyUrl('http://studio-ag.local')
     .watch(['resources/views', 'app']);
 
   /**

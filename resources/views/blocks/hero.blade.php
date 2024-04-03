@@ -22,7 +22,7 @@
       <h1 class="text-h2">{!! get_field('headline') !!}</h1>
 
       <div class="md:pl-8 ml-auto pt-6">
-        <p>{!! get_field('text') !!}</p>
+        <div class="e-content">{!! get_field('text') !!}</div>
   
         @if(get_field('button_1_text') or get_field('button_1_text') && get_field('button_2_text'))
           <div class="btn-group flex items-start pt-7">

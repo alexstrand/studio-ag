@@ -35,7 +35,7 @@
       <h2 class="pb-7">{{ get_field('headline') }}</h2>
 
       <div>
-        <p>{!! get_field('text') !!}</p>
+        <div class="e-content">{!! get_field('text') !!}</div>
   
         @if(get_field('button_text') && get_field('button_url'))
           <div class="btn-group flex items-center pt-7">

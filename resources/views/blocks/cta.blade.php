@@ -28,7 +28,6 @@
             @foreach(get_field('carousel_words') as $word)
               <div class="carousel-item">{{ $word['word'] }}</div>
             @endforeach
-
           </span>
         @endif
       </h2>

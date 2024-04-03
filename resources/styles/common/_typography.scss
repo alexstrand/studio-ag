@@ -46,6 +46,14 @@ p {
   font-weight: 400;
 }
 
+.e-content > p {
+  margin-bottom: 1rem;
+
+  &:last-of-type {
+    margin: 0;
+  }
+}
+
 .subtitle {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   font-size: clamp(0.75rem, 0.298vw + 0.607rem, 0.875rem); /* 12 - 14 */

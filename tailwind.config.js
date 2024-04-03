@@ -13,9 +13,7 @@ const config = {
       }, // Extend Tailwind's default colors
     },
   },
-  plugins: [
-    require('tailwind-hamburgers')
-  ],
+  plugins: [],
 };
 
 export default config;
