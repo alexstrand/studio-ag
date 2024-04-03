@@ -2,20 +2,21 @@
 @props([
   'slidesPerView' => 1,
   'spaceBetween' => 0,
-  'loop' => false
+  'loop' => 'false',
+  'centerMode' => 'false',
 ])
 
 @php($uniqueID = uniqid())
 
 @if($slot)
   <!-- Slider main container -->
-  <div {{ $attributes->merge(['class' => 'swiper swiper-'.$uniqueID]) }}>
+  <div {{ $attributes->merge(['class' => 'swiper overflow-y-visible swiper-'.$uniqueID]) }}>
     <!-- Additional required wrapper -->
     <ul class="swiper-wrapper">
       {!! $slot !!}
     </ul>
     <!-- If we need pagination -->
-    <div class="swiper-pagination bottom-0"></div>
+    <div class="swiper-pagination bottom-0 pt-12"></div>
   </div>
 @endif
 
@@ -23,7 +24,7 @@
 <script type="module">
   const swiper = new Swiper('.swiper-{{ $uniqueID }}', {
     direction: 'horizontal',
-    loop: true,
+    loop: {{ $loop }},
     slidesPerView: 1, 
     spaceBetween: 30,
     speed: 1000,
@@ -38,7 +39,8 @@
     breakpoints: {
       768: {
         slidesPerView: {{ $slidesPerView }},
-        spaceBetween: {{ $spaceBetween }}
+        spaceBetween: {{ $spaceBetween }},
+        centeredSlides: {{ $centerMode }},
       }
     }
   });

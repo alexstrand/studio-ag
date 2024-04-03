@@ -12,7 +12,7 @@
 --}}
 
 <x-section 
-  class="hero bg-beige pb-14 md:pb-24 pt-20 md:pt-32"
+  class="hero bg-beige pb-14 md:pb-24 pt-24 md:pt-36"
   aria-label="Headline here"
 >
   <x-content-wrapper class="flex items-center">

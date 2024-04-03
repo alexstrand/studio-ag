@@ -12,7 +12,7 @@
 --}}
 
 <x-section 
-  class="cta bg-white py-14 md:py-24 overflow-hidden"
+  class="services bg-white py-14 md:py-24 overflow-hidden"
   aria-label="Studio AG tjänster"
 >
   <x-content-wrapper class="w-full relative z-10">
@@ -26,7 +26,7 @@
 
     {{-- Services / Tjänster --}}
     <div class="services w-full">
-      <ul class="w-full pt-4 pb-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 lg:gap-x-6 gap-y-12">
+      <ul class="w-full pt-4 pb-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x- lg:gap-x-6 gap-y-16">
         @php($services = [1,1,1,1,1,1])
 
         @foreach($services as $service)
@@ -49,7 +49,7 @@
 
       </ul>
 
-      <div class="services-more pt-7">
+      <div class="services-more pt-10">
         <x-button 
           text="Flera tjänster"
           url="#"

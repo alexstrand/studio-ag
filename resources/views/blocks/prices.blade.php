@@ -12,7 +12,7 @@
 --}}
 
 <x-section-image
-  class="cta bg-white py-14 md:py-24 overflow-hidden"
+  class="prices bg-white py-14 md:py-24 overflow-hidden"
   aria-label="Studio AG priserna"
   image="{{ @asset('images/johanna-with-indy.png') }}"
 >

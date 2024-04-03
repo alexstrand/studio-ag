@@ -11,7 +11,7 @@
 
   @if($image)
     <div class="img-wrapper parallax absolute top-0 left-0 w-full h-full z-0 opacity-20">
-      <img src="{{ $image }}" alt="Studio AG arbetare" class="w-full h-full object-cover">
+      <img src="{{ $image }}" alt="Studio AG arbetare" class="w-full h-full object-cover parallax">
     </div>
   @endif
 </section>

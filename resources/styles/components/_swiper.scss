@@ -1,10 +1,35 @@
 /* Swiper */
 .swiper {
   .swiper-pagination {
-    bottom: 0 !important;
+    position: inherit;
 
     .swiper-pagination-bullet {
-      background-color: $red;
+      transition: $transition-base;
+      opacity: 1;
+      height: 1rem;
+      width: 1rem;
+      margin: 0 .33rem;
+      border: 2px solid $beige;
+      background-color: transparent;
+
+      &.swiper-pagination-bullet-active {
+        background-color: $beige;
+      }
+    }
+  }
+}
+
+/* Alt color */
+section.prices {
+  .swiper {
+    .swiper-pagination {  
+      .swiper-pagination-bullet {
+        border: 2px solid $black;
+  
+        &.swiper-pagination-bullet-active {
+          background-color: $black;
+        }
+      }
     }
   }
 }

@@ -6,13 +6,20 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+// Simple parallax JS
+import simpleParallax from 'simple-parallax-js';
+
 // Font awesome import
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import { faAnglesRight } from '@fortawesome/free-solid-svg-icons';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faQuoteRight } from '@fortawesome/free-solid-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faSquareFacebook } from '@fortawesome/free-brands-svg-icons';
 
 // Font awesome
-library.add(faAnglesRight, faCheck);
+library.add(faAnglesRight, faCheck, faQuoteRight, faInstagram, faLinkedin, faSquareFacebook);
 dom.watch();
 
 /**
@@ -27,6 +34,7 @@ domReady(async () => {
   const hamburgerTrigger = document.getElementById('hamburger-trigger');
   const navigationPrimary = document.querySelector('header .nav-primary');
   const textCarousels = document.querySelectorAll('.text-carousel');
+  const parallaxImages = document.querySelectorAll('.parallax');
   
   /**
    * Event listeners
@@ -49,6 +57,15 @@ domReady(async () => {
   addEventListener('scroll', (event) => {
     pageScroll();
   });
+
+  /**
+   * Simple parallax
+   */
+  if (parallaxImages.length) {
+    parallaxImages.forEach((image, i) => {
+      new simpleParallax(image);
+    });
+  }
 
   /**
    * Text carousel 

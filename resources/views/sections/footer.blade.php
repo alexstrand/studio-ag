@@ -20,6 +20,27 @@
     @endif
 
     {{-- Socials --}}
+    <div class="pb-7">
+      <ul class="flex justify-center items-center">
+        <li class="px-2">
+          <a class="block w-6 h-6" href="#">
+            <i class="fa-brands fa-instagram w-full h-full object-contain"></i>
+          </a>
+        </li>
+
+        <li class="px-2">
+          <a class="block w-6 h-6" href="#">
+            <i class="fa-brands fa-square-facebook w-full h-full object-contain"></i>
+          </a>
+        </li>
+
+        <li class="px-2">
+          <a class="block w-6 h-6" href="#">
+            <i class="fa-brands fa-linkedin w-full h-full object-contain"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
 
     <p class="w-full text-center">© Studio AG {{ date("Y") }}</p>
   </x-content-wrapper>

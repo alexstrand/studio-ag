@@ -28,9 +28,6 @@
 
     {{-- Hero text content --}}
     <div class="w-full md:w-6/12 text-black">
-
-      <x-subtitle text="DU BEHÖVER INTE GÖRA DET ENSAM" />
-
       <h2 class="pb-7">Om Studio AG</h2>
 
       <div class="">
@@ -48,7 +45,7 @@
           />
         </div>
       </div>
-      </div>
+    </div>
 
   </x-content-wrapper>
 </x-section>
