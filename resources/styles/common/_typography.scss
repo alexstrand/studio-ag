@@ -21,7 +21,8 @@ h2,
   letter-spacing: -0.5px;
 }
 
-h3 {
+h3,
+.text-h3 {
   font-size: clamp(1.313rem, 2.083vw + 0.313rem, 2.188rem); /* 21 - 35 */
 }
 
