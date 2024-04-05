@@ -24,11 +24,9 @@
       <h2 class="pb-7">
         {{ get_field('headline') }}
         @if(get_field('carousel_words'))
-          <span class="text-carousel">
-            @foreach(get_field('carousel_words') as $word)
-              <div class="carousel-item">{{ $word['word'] }}</div>
-            @endforeach
-          </span>
+          @php($words = implode(', ', array_column(get_field('carousel_words'), 'word')))
+          
+          <span class="type-js" data-words="{{ $words }}"></span>
         @endif
       </h2>
       

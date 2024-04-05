@@ -35,6 +35,17 @@ add_action('wp_enqueue_scripts', function () {
  */
 add_action('enqueue_block_editor_assets', function () {
     bundle('editor')->enqueue();
+
+    // Swiper JS
+    wp_enqueue_script(
+        'swiper-js',
+        get_template_directory_uri().'/includes/js/swiper/swiper-bundle.min.js',
+        [],
+        '1.0.0',
+        [
+            'strategy' => 'defer',
+        ]
+    );
 }, 100);
 
 /**

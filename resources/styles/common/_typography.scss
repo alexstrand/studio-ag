@@ -47,11 +47,23 @@ p {
   font-weight: 400;
 }
 
-.e-content > p {
-  margin-bottom: 1rem;
+.type-js,
+.typed-cursor {
+  font-style: italic;
+  color: $pink;
+}
 
-  &:last-of-type {
-    margin: 0;
+.e-content {
+  > p {
+    margin-bottom: 1rem;
+  
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
+  a {
+    text-decoration: underline;
   }
 }
 

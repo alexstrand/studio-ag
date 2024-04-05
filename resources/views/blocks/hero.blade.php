@@ -21,17 +21,13 @@
     <div class="w-full md:w-6/12 text-black">
       <h1 class="text-h2">{!! get_field('headline') !!}</h1>
 
-      @if(get_field('sub_headline'))
-        <h2 class="text-h3 pt-6">{!! get_field('sub_headline') !!}</h2>
-      @endif
-
       <div class="md:pl-8 ml-auto pt-6">
         @if(get_field('text'))
           <div class="e-content">{!! get_field('text') !!}</div>
         @endif
   
         @if(get_field('button_1_text') or get_field('button_1_text') && get_field('button_2_text'))
-          <div class="btn-group flex items-start pt-7">
+          <div class="btn-group flex flex-wrap items-start pt-7">
 
             @if(get_field('button_1_text') && get_field('button_1_url'))
               <x-button

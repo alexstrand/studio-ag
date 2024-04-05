@@ -39,7 +39,7 @@
         @php($prices = get_field('prices') ?? array())
 
         @foreach($prices as $key => $price)
-          <li class="swiper-slide price bg-green text-white shadow-lg px-8 py-16">            
+          <li class="swiper-slide price bg-green text-white rounded shadow-lg px-8 py-16" tabindex="0">            
             <h3 class="text-center">{{ $price['title'] ?? null }}</h3>
 
             <hr class="max-w-[200px] mx-auto my-7">

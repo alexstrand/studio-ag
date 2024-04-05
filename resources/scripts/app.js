@@ -6,6 +6,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+// Typed.js 
+import Typed from 'typed.js';
+
 // Simple parallax JS
 import simpleParallax from 'simple-parallax-js';
 
@@ -35,6 +38,7 @@ domReady(async () => {
   const navigationPrimary = document.querySelector('header .nav-primary');
   const textCarousels = document.querySelectorAll('.text-carousel');
   const parallaxImages = document.querySelectorAll('.parallax');
+  const typedSpans = document.querySelectorAll('.type-js');
   
   /**
    * Event listeners
@@ -68,53 +72,23 @@ domReady(async () => {
   }
 
   /**
-   * Text carousel 
+   * Typed.js
    */
-  textCarousels.forEach((carousel, i) => {
-    let carouselTexts = carousel.querySelectorAll('.carousel-item');
+  if (typedSpans.length) {
+    typedSpans.forEach((typedSpan, i) => {
+    let strings = typedSpan.dataset.words.split(', ');
 
-    // Init
-    carouselTexts.forEach((carouselText, i) => {
-      carouselTexts[0].classList.add('active');
-      carouselTexts[1].classList.add('next');
+      new Typed(typedSpan, {
+        strings: strings,
+        typeSpeed: 90,
+        backSpeed: 40,
+        startDelay: 1000,
+        loop: true,
+        showCursor: true,
+        cursorChar: '|',
+      });
     });
-
-    // Carousel functionality
-    window.setInterval(function(){
-      let totalSlides = carouselTexts.length;
-      let nextSlide = carousel.querySelector('.next');
-      let lastSlide = carouselTexts[totalSlides - 1];
-
-      // If next is first item
-      if (nextSlide == carouselTexts[0]) {
-        nextSlide.classList.add('active');
-        nextSlide.classList.remove('next');
-
-        lastSlide.classList.remove('active');
-        nextSlide.nextElementSibling.classList.add('next');
-
-        return;
-      }
-
-      // If next is final item
-      if (nextSlide == lastSlide) {
-        nextSlide.classList.add('active');
-        nextSlide.classList.remove('next');
-
-        lastSlide.previousElementSibling.classList.remove('active');
-        carouselTexts[0].classList.add('next');
-        return;
-      }
-
-      nextSlide.classList.add('active');
-      nextSlide.classList.remove('next');
-
-      nextSlide.previousElementSibling.classList.remove('active');
-      nextSlide.nextElementSibling.classList.add('next');
-      
-      return;
-    }, 2000);
-  });
+  }
 });
 
 /**
