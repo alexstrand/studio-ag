@@ -12,7 +12,7 @@
 --}}
 
 <x-section 
-  class="hero bg-beige pb-14 md:pb-24 pt-24 md:pt-36"
+  class="hero bg-gradient-to-r from-beige pb-14 md:pb-24 pt-24 md:pt-36"
   aria-label="Välkommen till Studio AG"
 >
   <x-content-wrapper class="flex items-center">

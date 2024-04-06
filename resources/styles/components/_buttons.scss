@@ -6,6 +6,14 @@
   border: 1px solid $green;
   min-width: 200px;
 
+  &.menu-item {
+    padding: 0;
+
+    a {
+      padding: 1rem;
+    }
+  }
+
   &:hover,
   &:focus {
     background-color: white;
