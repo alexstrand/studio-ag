@@ -12,7 +12,7 @@
   <!-- Slider main container -->
   <div {{ $attributes->merge(['class' => 'swiper overflow-y-visible swiper-'.$uniqueID]) }}>
     <!-- Additional required wrapper -->
-    <ul class="swiper-wrapper">
+    <ul class="swiper-wrapper flex">
       {!! $slot !!}
     </ul>
     <!-- If we need pagination -->

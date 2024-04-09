@@ -43,6 +43,35 @@
             "append": ""
         },
         {
+            "key": "field_6615a26e5f651",
+            "label": "Featured services",
+            "name": "featured_services",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "service"
+            ],
+            "post_status": "",
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "return_format": "id",
+            "min": "",
+            "max": "",
+            "elements": "",
+            "bidirectional": 0,
+            "bidirectional_target": []
+        },
+        {
             "key": "field_660d804b8faed",
             "label": "Button text",
             "name": "button_text",
@@ -107,5 +136,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712178126
+    "modified": 1712693920
 }

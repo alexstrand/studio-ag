@@ -8,7 +8,13 @@
 @import 'common/variables';
 @import 'common/fonts';
 @import 'common/typography';
+@import 'common/global';
+
+@import 'sections/navigation';
+@import 'sections/branding';
+@import 'sections/footer';
 
 @import 'blocks/instagram-feed';
 
 @import 'components/buttons';
+@import 'components/swiper';

@@ -27,27 +27,27 @@
     {{-- Services / Tjänster --}}
     <div class="services w-full">
       <ul class="w-full pt-4 pb-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x- lg:gap-x-6 gap-y-16">
-        @php($services = get_posts([
-          'post_type' => 'service'
-        ]))
+        @php($services = get_field('featured_services') ?? null)
 
-        @foreach($services as $service)
-          <li class="service text-black">
-            <a 
-              class="group"
-              href="{{ get_the_permalink('button_url') }}"
-            >
-              <x-image 
-                image="{{ get_post_thumbnail_id($service) }}"
-                ratio="56.25"
-              />
+        @if($services)
+          @foreach($services as $service)
+            <li class="service text-black">
+              <a 
+                class="group"
+                href="{{ get_the_permalink(get_field('button_url')) }}"
+              >
+                <x-image 
+                  image="{{ get_post_thumbnail_id($service) }}"
+                  ratio="56.25"
+                />
 
-              <h3 class="py-4 group-hover:text-red group-focus:text-red transition-all duration-300">{{ get_the_title($service) }}</h3>
+                <h3 class="py-4 group-hover:text-red group-focus:text-red transition-all duration-300">{{ get_the_title($service) }}</h3>
 
-              <p class="group-hover:text-red group-focus:text-red transition-all duration-300">{{ get_the_excerpt($service) }} <i class="fa-solid fa-angles-right text-black ml-2 group-hover:ml-3 group-focus:ml-3 group-hover:text-red group-focus:text-red transition-all duration-300"></i></p>
-            </a>
-          </li>
-        @endforeach
+                <p class="group-hover:text-red group-focus:text-red transition-all duration-300">{{ get_the_excerpt($service) }} <i class="fa-solid fa-angles-right text-black ml-2 group-hover:ml-3 group-focus:ml-3 group-hover:text-red group-focus:text-red transition-all duration-300"></i></p>
+              </a>
+            </li>
+          @endforeach
+        @endif
 
       </ul>
 
@@ -55,7 +55,7 @@
         <div class="services-more pt-10">
           <x-button 
             text="{{ get_field('button_text') }}"
-            url="{{ get_the_permalink('button_url') }}"
+            url="{{ get_the_permalink(get_field('button_url')) }}"
           />
         </div>
       @endif
