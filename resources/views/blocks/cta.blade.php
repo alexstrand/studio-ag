@@ -1,9 +1,9 @@
 {{--
-  Title: Studio AG CTA
-  Description: Page cta
+  Title: Studio AG CTA with typing text
+  Description: Page cta with typing text
   Category: studioag
   Icon: admin-comments
-  Keywords: studio ag cta
+  Keywords: studio ag cta typing text
   Mode: preview
   Align: full
   PostTypes: page
@@ -41,8 +41,5 @@
   </x-content-wrapper>
 
   {{-- Abstract line images --}}
-  <div class="lines absolute top-0 left-0 w-full h-full z-0">
-    <img src="@asset('images/line-2.png')" class="absolute top-0 left-0 w-[10vw]"/>
-    <img src="@asset('images/line-3.png')" class="absolute top-0 right-0 w-[20vw]"/>
-  </div>
+  <x-background-lines />
 </x-section>

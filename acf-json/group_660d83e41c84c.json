@@ -3,6 +3,34 @@
     "title": "Block: About",
     "fields": [
         {
+            "key": "field_661eb4f65b6a8",
+            "label": "Background color",
+            "name": "background_color",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "#FFFFFF": "White",
+                "#F6EADF": "Beige",
+                "#D35845": "Red",
+                "#154734": "Green",
+                "#EFBDBF": "Pink"
+            },
+            "default_value": "#FFFFFF",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_660d83e41e5e0",
             "label": "Intro headline",
             "name": "intro_headline",
@@ -152,5 +180,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712178043
+    "modified": 1713288466
 }

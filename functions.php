@@ -63,3 +63,20 @@ collect(['setup', 'filters'])
             );
         }
     });
+
+/**
+ * Disable gutenberg editor.
+ */
+function devhouse_disable_gutenberg($current_status, $post_type)
+{
+    $post_types = [
+        'service',
+    ];
+
+    if (in_array($post_type, $post_types)) {
+        return false;
+    }
+
+    return $current_status;
+}
+add_filter('use_block_editor_for_post_type', 'devhouse_disable_gutenberg', 10, 2);

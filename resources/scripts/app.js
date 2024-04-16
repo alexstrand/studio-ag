@@ -110,7 +110,7 @@ function pageScroll() {
 function pageIsScrolled() {
   let scrollDistance = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
   
-  if (scrollDistance > 10) {
+  if (scrollDistance > 115) {
     return true;
   }
   

@@ -1,4 +1,4 @@
-<header id="header" class="banner w-full fixed z-[100] left-0 {{ is_user_logged_in() ? 'top-[46px] md:top-8' : 'top-0' }} [&.scrolled]:bg-beige py-4 md:py-7 [&.scrolled]:md:py-4 transition-all duration-300">
+<header id="header" class="banner w-full flex items-center {{ is_front_page() ? 'bg-transparent' : 'bg-beige' }} fixed z-[100] left-0 {{ is_user_logged_in() ? 'top-[46px] md:top-8' : 'top-0' }} [&.scrolled]:bg-beige py-4 md:py-7 [&.scrolled]:md:py-4 transition-all duration-300">
   <x-content-wrapper class="w-full flex items-center justify-between md:justify-start">
     <a class="brand relative z-10 md:mr-16 transition-all duration-300" href="{{ home_url('/') }}">
       <img src="@asset('images/studio-ag-logo.svg')" alt="Studio AG logga" />

@@ -19,7 +19,7 @@
 >
   <x-content-wrapper class="md:flex md:items-center {{ $imagePosition === 'left' ? '' : 'md:flex-row-reverse' }}">
 
-    {{-- Hero image content --}}
+    {{-- Image content --}}
     <div class="w-full md:w-5/12 {{ $imagePosition === 'left' ? 'md:mr-auto' : 'md:ml-auto' }} pb-7 md:pb-0">
       <x-image 
         image="{{ get_field('image') }}"
@@ -28,7 +28,7 @@
       />
     </div>
 
-    {{-- Hero text content --}}
+    {{-- Text content --}}
     <div class="w-full md:w-6/12 text-white">
       <x-subtitle text="{{ get_field('intro_headline') }}" />
 

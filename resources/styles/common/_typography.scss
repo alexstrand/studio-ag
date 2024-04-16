@@ -41,9 +41,11 @@ h6 {
   letter-spacing: .15px;
 }
 
-p {
+p,
+input[type="submit"],
+.gform-field-label {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  font-size: clamp(1rem, 0.298vw + 0.857rem, 1.125rem);
+  font-size: clamp(1rem, 0.298vw + 0.857rem, 1.125rem) !important;
   font-weight: 400;
 }
 
@@ -55,7 +57,7 @@ p {
 
 .e-content {
   > p {
-    margin-bottom: 1rem;
+    margin-bottom: clamp(1rem, 0.298vw + 0.857rem, 1.125rem);
   
     &:last-of-type {
       margin: 0;
@@ -65,6 +67,28 @@ p {
   a {
     text-decoration: underline;
   }
+
+  ul,
+  ol {
+    padding: clamp(1rem, 0.298vw + 0.857rem, 1.125rem) 0 clamp(1rem, 0.298vw + 0.857rem, 1.125rem) clamp(1rem, 0.298vw + 0.857rem, 1.125rem);
+
+    li {
+      margin-bottom: 4px;
+      padding-left: 4px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  ul {
+    list-style-type: "\2713";
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
 }
 
 .subtitle {
@@ -73,7 +97,8 @@ p {
 }
 
 .btn,
-.text-link {
+.text-link,
+.gform_submission_error {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 

@@ -1,5 +1,13 @@
 /* Navigation */
 header {
+  height: 75px;
+
+  @media screen and (min-width: $md) {
+    &:not(.scrolled) {
+      height: 115px;
+    }
+  }
+
   nav {
     @media screen and (max-width: calc($md - 1px)) {
       opacity: 0;
