@@ -9,8 +9,9 @@ import 'swiper/css/pagination';
 // Typed.js 
 import Typed from 'typed.js';
 
-// Simple parallax JS
-import simpleParallax from 'simple-parallax-js';
+// Parallax
+import { jarallax } from "jarallax";
+import 'jarallax/dist/jarallax.min.css';
 
 // Font awesome import
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
@@ -37,7 +38,7 @@ domReady(async () => {
   const hamburgerTrigger = document.getElementById('hamburger-trigger');
   const navigationPrimary = document.querySelector('header .nav-primary');
   const textCarousels = document.querySelectorAll('.text-carousel');
-  const parallaxImages = document.querySelectorAll('.parallax');
+  const parallaxImages = document.querySelectorAll('.jarallax');
   const typedSpans = document.querySelectorAll('.type-js');
   
   /**
@@ -67,7 +68,9 @@ domReady(async () => {
    */
   if (parallaxImages.length) {
     parallaxImages.forEach((image, i) => {
-      new simpleParallax(image);
+      jarallax(image, {
+        speed: 0.5,
+      });
     });
   }
 

@@ -11,8 +11,6 @@
   SupportsMode: false
 --}}
 
-@php($services = get_field('featured_services') ?? null)
-
 <x-section 
   class="services bg-white py-14 md:py-24 overflow-hidden"
   aria-label="{{ get_field('intro_headline') }}"
@@ -40,7 +38,7 @@
     {{-- Services / Tjänster --}}
     <div class="services w-full">
       
-      @if($services)
+      @if($services = get_field('featured_services') ?? null)
 
         {{-- Featured services --}}
         <div class="w-full pt-4 pb-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x- lg:gap-x-6 gap-y-16">
@@ -69,16 +67,19 @@
         {{-- All services --}}
         <div class="w-full pt-4 pb-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x- lg:gap-x-6 gap-y-16">
 
-          @php($services = get_posts([
-            'numberposts' => -1,
-            'post_type' => 'service',
-            'orderby' => 'menu_order'
-          ]))
+          @php
+            $services = get_posts([
+              'number_posts' => -1,
+              'post_type' => 'service',
+              'orderby' => 'menu_order'
+            ]);
+
+            $services = array_column($services, 'ID') ?? null;
+          @endphp
 
           @if(!empty($services))
-            @php($services = array_column($services, 'ID'))
-
             @foreach($services as $service)
+              @php(get_post($service))
               <article class="service text-black">
                 <x-image 
                   image="{{ get_post_thumbnail_id($service) }}"
@@ -87,7 +88,7 @@
 
                 <h3 class="py-4">{{ get_the_title($service) }}</h3>
 
-                <p class="">{{ get_the_excerpt($service) }}</p>
+                <div class="e-content">{!! get_post($service)->post_content !!}</div>
               </article>
             @endforeach
           @endif

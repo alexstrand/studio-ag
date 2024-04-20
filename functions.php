@@ -70,7 +70,7 @@ collect(['setup', 'filters'])
 function devhouse_disable_gutenberg($current_status, $post_type)
 {
     $post_types = [
-        'service',
+        //'service',
     ];
 
     if (in_array($post_type, $post_types)) {
