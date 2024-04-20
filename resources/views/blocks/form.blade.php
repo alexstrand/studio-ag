@@ -31,8 +31,8 @@
 
     {{-- Form content --}}
     <div class="w-full md:w-10/12 mx-auto form-wrapper form-white">
-      @if(get_field('form_id'))
-        {!! do_shortcode('[gravityform id="' . get_field('form_id') . '" title="false"]') !!}
+      @if(get_field('form_shortcode'))
+        {!! do_shortcode(get_field('form_shortcode')) !!}
       @endif
     </div>
 

@@ -32,23 +32,29 @@
     {{-- Services / Tjänster --}}
     <div class="prices w-full">
       <x-swiper-wrapper 
-        class="w-full lg:w-8/12 mx-auto pt-4 pb-7"
+        class="w-full lg:w-10/12 xl:w-8/12 mx-auto pt-4 pb-7"
         slidesPerView="3"
         spaceBetween="30"
+        autoSpeed="200000"
       >
         @php($prices = get_field('prices') ?? array())
 
-        @foreach($prices as $key => $price)
-          <li class="swiper-slide price bg-green text-white rounded shadow-lg px-8 py-16" tabindex="0">            
-            <h3 class="text-center">{{ $price['title'] ?? null }}</h3>
+        @foreach($prices as $price)
+          <li class="swiper-slide price bg-green text-white rounded shadow-lg px-8 py-12" tabindex="0">            
+            
+            {{-- Package title --}}
+            <h3 class="text-center pb-2">{{ $price['title'] ?? null }}</h3>
 
-            <hr class="max-w-[200px] mx-auto my-7">
+            {{-- Price --}}
+            <p class="font-bold text-2xl text-center">{!! $price['price'] !!}</p>
 
-            <div class="text-center">
-              <p>{{ $price['info_text'] ?? null }}</p>
-              <p>-</p>
-              <p class="pb-7">{{ $price['price'] ?? null }}</p>
-            </div>
+            {{-- Contract length --}}
+            <div class="text-center">{!! $price['below_price_text'] !!}</div>
+
+            <hr class="border-red max-w-[80%] mx-auto my-4">
+
+            {{-- Info text --}}
+            <div class="text-center pb-7">{!! $price['info_text'] !!}</div>
 
             @php($buttonText = $price['button_text'] ?? null)
             @php($buttonUrl = $price['button_url'] ?? null)
@@ -56,7 +62,7 @@
             @if($buttonText && $buttonUrl)
               <x-button 
                 text="{{ $buttonText }}"
-                url="{{ get_the_permalink($buttonUrl) }}"
+                url="{{ $buttonUrl }}"
                 class="alt"
               />
             @endif

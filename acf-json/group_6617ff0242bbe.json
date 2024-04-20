@@ -89,10 +89,10 @@
         },
         {
             "key": "field_661d4698cb9b3",
-            "label": "Form ID",
-            "name": "form_id",
+            "label": "Form shortcode",
+            "name": "form_shortcode",
             "aria-label": "",
-            "type": "number",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -102,10 +102,8 @@
                 "id": ""
             },
             "default_value": "",
-            "min": "",
-            "max": "",
+            "maxlength": "",
             "placeholder": "",
-            "step": "",
             "prepend": "",
             "append": ""
         }
@@ -128,5 +126,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1713194674
+    "modified": 1713639313
 }

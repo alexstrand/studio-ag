@@ -4,6 +4,7 @@
   'spaceBetween' => 0,
   'loop' => 'false',
   'centerMode' => 'false',
+  'autoSpeed' => 8000,
 ])
 
 @php($uniqueID = uniqid())
@@ -29,7 +30,7 @@
     spaceBetween: 30,
     speed: 1000,
     autoplay: {
-      delay: 8000,
+      delay: {{ $autoSpeed }},
       disableOnInteraction: true,
     },
     pagination: {

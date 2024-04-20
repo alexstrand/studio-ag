@@ -106,9 +106,9 @@
                     "parent_repeater": "field_660d856701237"
                 },
                 {
-                    "key": "field_660d858e01239",
-                    "label": "Info text",
-                    "name": "info_text",
+                    "key": "field_660d859a0123a",
+                    "label": "Price",
+                    "name": "price",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -127,9 +127,30 @@
                     "parent_repeater": "field_660d856701237"
                 },
                 {
-                    "key": "field_660d859a0123a",
-                    "label": "Price",
-                    "name": "price",
+                    "key": "field_6624095ad1fa3",
+                    "label": "Below price text",
+                    "name": "below_price_text",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "placeholder": "",
+                    "new_lines": "br",
+                    "parent_repeater": "field_660d856701237"
+                },
+                {
+                    "key": "field_660d858e01239",
+                    "label": "Info text",
+                    "name": "info_text",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -173,7 +194,7 @@
                     "label": "Button URL",
                     "name": "button_url",
                     "aria-label": "",
-                    "type": "post_object",
+                    "type": "url",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -182,17 +203,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "post_type": [
-                        "page"
-                    ],
-                    "post_status": "",
-                    "taxonomy": "",
-                    "return_format": "id",
-                    "multiple": 0,
-                    "allow_null": 0,
-                    "bidirectional": 0,
-                    "ui": 1,
-                    "bidirectional_target": [],
+                    "default_value": "",
+                    "placeholder": "",
                     "parent_repeater": "field_660d856701237"
                 }
             ]
@@ -241,5 +253,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712178118
+    "modified": 1713639030
 }
