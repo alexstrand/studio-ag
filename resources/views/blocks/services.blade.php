@@ -69,7 +69,7 @@
 
           @php
             $services = get_posts([
-              'number_posts' => -1,
+              'numberposts' => -1,
               'post_type' => 'service',
               'orderby' => 'menu_order'
             ]);
