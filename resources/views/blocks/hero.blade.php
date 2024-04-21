@@ -19,7 +19,20 @@
 
     {{-- Hero text content --}}
     <div class="w-full md:w-6/12 text-black">
-      <h1 class="text-h2">{!! get_field('headline') !!}</h1>
+
+      <div class="w-full flex items-center md:block">
+        <h1 class="text-h2 w-6/12 md:w-full">{!! get_field('headline') !!}</h1>
+
+        {{-- Hero image content desktop --}}
+        <div class="md:hidden w-5/12 ml-auto">
+          @if(get_field('image'))
+            <x-image 
+              image="{{ get_field('image') }}"
+              ratio="110" 
+            />
+          @endif
+        </div>
+      </div>
 
       <div class="md:pl-8 ml-auto pt-6">
         @if(get_field('text'))
@@ -50,7 +63,7 @@
       </div>
     </div>
 
-    {{-- Hero image content --}}
+    {{-- Hero image content desktop --}}
     <div class="w-full hidden md:block md:w-5/12 md:ml-auto">
       @if(get_field('image'))
         <x-image 
