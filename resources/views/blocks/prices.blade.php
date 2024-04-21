@@ -46,7 +46,10 @@
             <h3 class="text-center pb-2">{{ $price['title'] ?? null }}</h3>
 
             {{-- Price --}}
-            <p class="font-bold text-2xl text-center">{!! $price['price'] !!}</p>
+            <p class="font-bold text-xl text-center">{!! $price['price'] !!}</p>
+
+            {{-- Price --}}
+            <p class="font-bold text-center pb-2">{!! $price['hours'] !!}</p>
 
             {{-- Contract length --}}
             <div class="text-center">{!! $price['below_price_text'] !!}</div>

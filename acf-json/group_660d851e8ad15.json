@@ -127,6 +127,27 @@
                     "parent_repeater": "field_660d856701237"
                 },
                 {
+                    "key": "field_66251eb7fffcf",
+                    "label": "Hours",
+                    "name": "hours",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_660d856701237"
+                },
+                {
                     "key": "field_6624095ad1fa3",
                     "label": "Below price text",
                     "name": "below_price_text",
@@ -253,5 +274,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1713639030
+    "modified": 1713708736
 }
