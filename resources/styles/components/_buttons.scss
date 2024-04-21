@@ -50,15 +50,33 @@ form input[type="submit"] {
   }
 }
 
-form input[type="submit"] {
-  background-color: $red;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  color: white;
+form {
+  &.btn-orange {
+    input[type="submit"] {
+      background-color: $red;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      color: white;
+    
+      &:hover,
+      &:focus {
+        color: $red;
+      }
+    }
+  }
 
-  &:hover,
-  &:focus {
-    color: $red;
+  &.btn-green {
+    input[type="submit"] {
+      background-color: $green;
+      width: 100%;
+      margin: 0 auto;
+      color: white;
+    
+      &:hover,
+      &:focus {
+        color: $green;
+      }
+    }
   }
 }

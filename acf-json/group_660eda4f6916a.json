@@ -68,6 +68,25 @@
                     },
                     "default_value": "",
                     "placeholder": ""
+                },
+                {
+                    "key": "field_66252513e93c3",
+                    "label": "Contact email",
+                    "name": "contact_email",
+                    "aria-label": "",
+                    "type": "email",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
                 }
             ]
         },
@@ -110,5 +129,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712250218
+    "modified": 1713710373
 }

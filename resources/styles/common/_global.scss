@@ -81,7 +81,7 @@ body {
     display: none;
   }
 
-  .gfield--type-textarea {
+  .gfield--type-textarea.extra-padding {
     margin: 1rem 0 !important;
   }
 
@@ -114,6 +114,15 @@ body {
     text-align: center;
     text-transform: uppercase;
     font-size: 1rem;
+  }
+
+  .gform_footer {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+
+    input[type="submit"] {
+      margin-bottom: 0 !important;
+    }
   }
 }
 
