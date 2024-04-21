@@ -92,7 +92,8 @@ header {
             padding: 0 0 1rem 0;
 
             @media screen and (min-width: $md) {
-              padding: 0 .5rem;
+              padding: 0 1rem;
+              font-size: clamp(1rem, 0.298vw + 0.857rem, 1.125rem);
             }
             
             a {

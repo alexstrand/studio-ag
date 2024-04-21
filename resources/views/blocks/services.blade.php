@@ -41,7 +41,7 @@
       @if($services = get_field('featured_services') ?? null)
 
         {{-- Featured services --}}
-        <div class="w-full pt-4 pb-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x- lg:gap-x-6 gap-y-16">
+        <div class="w-full pt-4 pb-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-16">
 
           @foreach($services as $service)
             <article class="service text-black">
@@ -65,7 +65,7 @@
       @else
 
         {{-- All services --}}
-        <div class="w-full pt-4 pb-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x- lg:gap-x-6 gap-y-16">
+        <div class="w-full pt-4 pb-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-16">
 
           @php
             $services = get_posts([
