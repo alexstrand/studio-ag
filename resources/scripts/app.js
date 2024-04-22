@@ -13,6 +13,10 @@ import Typed from 'typed.js';
 import { jarallax } from "jarallax";
 import 'jarallax/dist/jarallax.min.css';
 
+// Accordion
+import Accordion from 'accordion-js';
+import 'accordion-js/dist/accordion.min.css';
+
 // Font awesome import
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import { faAnglesRight } from '@fortawesome/free-solid-svg-icons';
@@ -40,6 +44,7 @@ domReady(async () => {
   const textCarousels = document.querySelectorAll('.text-carousel');
   const parallaxImages = document.querySelectorAll('.jarallax');
   const typedSpans = document.querySelectorAll('.type-js');
+  const accordions = document.querySelectorAll('.accordion-container');
   
   /**
    * Event listeners
@@ -71,6 +76,17 @@ domReady(async () => {
       jarallax(image, {
         speed: 0.5,
       });
+    });
+  }
+
+  /**
+   * Accordion-js
+   */
+  if(accordions.length) {
+    accordions.forEach((accordion, i) => {
+      var accordionObj = new Accordion(accordion, {
+        duration: 200,
+      });   
     });
   }
 

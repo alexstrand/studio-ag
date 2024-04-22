@@ -27,12 +27,18 @@
     {{-- FAQ content --}}
     @if($faqs = get_field('faqs'))
       <div class="max-w-[1000px] mx-auto">
-        <ul class="faqs">
+        <ul class="faqs accordion-container">
 
           @foreach($faqs as $faq)
-            <li class="faq py-7 border-solid border-0 first:border-t border-b border-black">
-              <p class="pb-4 text-left font-bold">{{ $faq['question'] }}</p>
-              <div class="e-content text-left">{!! $faq['text'] !!}</div>
+            <li class="faq ac py-7 border-solid border-0 first:border-t border-b border-black">
+              <p class="ac-header">
+                <button type="button" class="ac-trigger pb-4 text-left font-bold">{{ $faq['question'] }}</button>
+              </p>
+              <div class="e-content text-left ac-panel">
+                <div class="px-2 pt-4">
+                  {!! $faq['text'] !!}
+                </div>
+              </div>
             </li>
           @endforeach
         </ul>

@@ -29,6 +29,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
     "@fortawesome/free-regular-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "accordion-js": "^3.3.4",
     "jarallax": "^2.2.0",
     "swiper": "^11.1.0",
     "tailwind-hamburgers": "^1.3.5",
