@@ -31,9 +31,9 @@
 
           @foreach($faqs as $faq)
             <li class="faq ac py-7 border-solid border-0 first:border-t border-b border-black">
-              <p class="ac-header">
+              <div class="ac-header">
                 <button type="button" class="ac-trigger pb-4 text-left font-bold">{{ $faq['question'] }}</button>
-              </p>
+              </div>
               <div class="e-content text-left ac-panel">
                 <div class="px-2 pt-4">
                   {!! $faq['text'] !!}
