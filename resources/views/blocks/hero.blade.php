@@ -21,7 +21,9 @@
     <div class="w-full md:w-6/12 text-black">
 
       <div class="w-full flex items-center md:block">
-        <h1 class="text-h2 w-6/12 md:w-full">{!! get_field('headline') !!}</h1>
+        @if($headline = get_field('headline') ?? null)
+          <h1 class="text-h2 w-6/12 md:w-full">{!! $headline !!}</h1>
+        @endif
 
         {{-- Hero image content desktop --}}
         <div class="md:hidden w-5/12 ml-auto">

@@ -19,7 +19,7 @@ import 'accordion-js/dist/accordion.min.css';
 
 // Font awesome import
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
-import { faAnglesRight } from '@fortawesome/free-solid-svg-icons';
+import { faAnglesRight, faScaleUnbalanced } from '@fortawesome/free-solid-svg-icons';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
@@ -111,8 +111,8 @@ domReady(async () => {
 });
 
 /**
-   * Header on scroll
-   */
+ * Header on scroll
+ */
 function pageScroll() {
   if (pageIsScrolled()) {
     header.classList.add('scrolled');
@@ -124,8 +124,8 @@ function pageScroll() {
 }
 
 /**
-   * Page scroll detection
-   */
+ * Page scroll detection
+ */
 function pageIsScrolled() {
   let scrollDistance = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
   

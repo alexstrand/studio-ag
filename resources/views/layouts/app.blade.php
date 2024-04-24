@@ -7,7 +7,7 @@
     @php(wp_head())
   </head>
 
-  <body @php(body_class()) style="opacity: 0; transition: opacity 200ms ease-in-out;" onload="document.body.style.opacity='1'">
+  <body @php(body_class()) style="opacity: 0; transition: opacity 50ms ease-in-out;" onload="document.body.style.opacity='1'">
     @php(wp_body_open())
 
     <div id="app">
