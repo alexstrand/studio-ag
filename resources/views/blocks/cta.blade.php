@@ -21,8 +21,8 @@
     <div class="max-w-[1000px] mx-auto">
       <x-subtitle text="{{ get_field('intro_headline') }}" />
 
-      <h2 class="pb-7 typing-text"><br>
-        {{ get_field('headline') }}
+      <h2 class="pb-7 typing-text">
+        {{ get_field('headline') }}<br>
         @if(get_field('carousel_words'))
           @php($words = implode(', ', array_column(get_field('carousel_words'), 'word')))
           
