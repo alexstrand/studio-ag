@@ -31,7 +31,7 @@
     <div 
       class="w-full md:w-5/12 md:ml-auto pb-7 md:pb-0"
       data-aos="fade-up"
-      data-aos-delay="400"
+      data-aos-delay="250"
     >
       <x-image 
         image="{{ get_field('image') }}"
@@ -44,7 +44,7 @@
     <div 
       class="w-full md:w-6/12 {{ in_array($bgColor, $darkColors) ? 'text-white' : 'text-black' }}"
       data-aos="fade-up"
-      data-aos-delay="300"
+      data-aos-delay="150"
     >
       @if(get_field('intro_headline'))
         <x-subtitle  

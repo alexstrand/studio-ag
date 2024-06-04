@@ -31,7 +31,7 @@
     <div 
       class="max-w-[1000px] mx-auto {{ in_array($bgColor, $darkColors) ? 'text-white' : 'text-black' }}"
       data-aos="fade-up"
-      data-aos-delay="300"
+      data-aos-delay="150"
     >
       <x-subtitle 
         class="{{ in_array($bgColor, $darkColors) ? 'text-white' : 'text-black' }}" 

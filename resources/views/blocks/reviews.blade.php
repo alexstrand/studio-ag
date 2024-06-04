@@ -18,7 +18,7 @@
   <x-content-wrapper 
     class="w-full relative z-10"
     data-aos="fade-up"
-    data-aos-delay="300"
+    data-aos-delay="150"
   >
 
     {{-- Reviews content --}}

@@ -21,7 +21,7 @@
     <div 
       class="max-w-[1000px] mx-auto"
       data-aos="fade-up"
-      data-aos-delay="300"
+      data-aos-delay="150"
     >
       <x-subtitle text="{{ get_field('intro_headline') }}" />
 

@@ -21,7 +21,7 @@
     <div 
       class="w-full md:w-6/12 text-black"
       data-aos="fade-up"
-      data-aos-delay="300"
+      data-aos-delay="150"
     >
 
       <div class="w-full flex items-center md:block">
@@ -73,7 +73,7 @@
     <div 
       class="w-full hidden md:block md:w-5/12 md:ml-auto"
       data-aos="fade-up"
-      data-aos-delay="400"
+      data-aos-delay="250"
     >
       @if(get_field('image'))
         <x-image 

@@ -20,7 +20,7 @@
   <x-content-wrapper 
     class="md:flex md:items-center {{ $imagePosition === 'left' ? '' : 'md:flex-row-reverse' }}"
     data-aos="fade-up"
-    data-aos-delay="300"
+    data-aos-delay="150"
   >
 
     {{-- Image content --}}

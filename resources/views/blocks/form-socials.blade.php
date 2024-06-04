@@ -21,7 +21,7 @@
     <div 
       class="w-full md:w-7/12 md:ml-auto pb-7 md:pb-0 text-white"
       data-aos="fade-up"
-      data-aos-delay="400"  
+      data-aos-delay="250"  
     >
       <div>
         <h3 class="pb-4">{!! get_field('headline') !!}</h3>
@@ -39,7 +39,7 @@
     <div 
       class="w-full md:w-4/12 text-white flex flex-col"
       data-aos="fade-up"
-      data-aos-delay="300"
+      data-aos-delay="150"
     >
       @if(get_field('image'))
         <div class="pt-4 md:pt-0 w-full flex-1 relative">
