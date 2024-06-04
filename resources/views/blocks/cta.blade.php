@@ -18,7 +18,11 @@
   <x-content-wrapper class="text-center w-full relative z-10">
 
     {{-- CTA content --}}
-    <div class="max-w-[1000px] mx-auto">
+    <div 
+      class="max-w-[1000px] mx-auto"
+      data-aos="fade-up"
+      data-aos-delay="300"
+    >
       <x-subtitle text="{{ get_field('intro_headline') }}" />
 
       <h2 class="pb-7 typing-text">

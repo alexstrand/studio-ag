@@ -18,7 +18,11 @@
   <x-content-wrapper class="md:flex md:flex-row-reverse">
 
     {{-- Headline & form --}}
-    <div class="w-full md:w-7/12 md:ml-auto pb-7 md:pb-0 text-white">
+    <div 
+      class="w-full md:w-7/12 md:ml-auto pb-7 md:pb-0 text-white"
+      data-aos="fade-up"
+      data-aos-delay="400"  
+    >
       <div>
         <h3 class="pb-4">{!! get_field('headline') !!}</h3>
         <div class="e-content pb-4">{!! get_field('text') !!}</div>
@@ -32,7 +36,11 @@
     </div>
 
     {{-- Image and socials --}}
-    <div class="w-full md:w-4/12 text-white flex flex-col">
+    <div 
+      class="w-full md:w-4/12 text-white flex flex-col"
+      data-aos="fade-up"
+      data-aos-delay="300"
+    >
       @if(get_field('image'))
         <div class="pt-4 md:pt-0 w-full flex-1 relative">
           <figure class="w-full md:h-full md:absolute md:top-0 md:right-0 md:bottom-0 md:left-0">

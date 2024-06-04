@@ -28,7 +28,11 @@
   <x-content-wrapper class="text-center w-full relative z-10">
 
     {{-- CTA content --}}
-    <div class="max-w-[1000px] mx-auto {{ in_array($bgColor, $darkColors) ? 'text-white' : 'text-black' }}">
+    <div 
+      class="max-w-[1000px] mx-auto {{ in_array($bgColor, $darkColors) ? 'text-white' : 'text-black' }}"
+      data-aos="fade-up"
+      data-aos-delay="300"
+    >
       <x-subtitle 
         class="{{ in_array($bgColor, $darkColors) ? 'text-white' : 'text-black' }}" 
         text="{{ get_field('intro_headline') }}" 

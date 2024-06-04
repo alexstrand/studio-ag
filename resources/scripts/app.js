@@ -6,6 +6,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+// AOS
+import AOS from 'aos';
+
 // Typed.js 
 import Typed from 'typed.js';
 
@@ -45,6 +48,15 @@ domReady(async () => {
   const parallaxImages = document.querySelectorAll('.jarallax');
   const typedSpans = document.querySelectorAll('.type-js');
   const accordions = document.querySelectorAll('.accordion-container');
+
+  // AOS
+  AOS.init({
+    once: true,
+    duration: 750,
+    easing: 'ease-out-cubic',
+    disable: 'mobile', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+    startEvent: 'DOMContentLoaded',
+  }); 
   
   /**
    * Event listeners

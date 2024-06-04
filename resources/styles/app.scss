@@ -3,7 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* AOS override */
+$aos-distance: 2rem;
+
 /* Theme styles */
+@import 'aos/aos';
+
 @import 'common/reset';
 @import 'common/variables';
 @import 'common/fonts';

@@ -27,8 +27,12 @@
 >
   <x-content-wrapper class="relative z-10 md:flex md:items-center md:flex-row-reverse">
 
-    {{-- Hero image content --}}
-    <div class="w-full md:w-5/12 md:ml-auto pb-7 md:pb-0">
+    {{-- About image content --}}
+    <div 
+      class="w-full md:w-5/12 md:ml-auto pb-7 md:pb-0"
+      data-aos="fade-up"
+      data-aos-delay="400"
+    >
       <x-image 
         image="{{ get_field('image') }}"
         ratio="110"
@@ -36,8 +40,12 @@
       />
     </div>
 
-    {{-- Hero text content --}}
-    <div class="w-full md:w-6/12 {{ in_array($bgColor, $darkColors) ? 'text-white' : 'text-black' }}">
+    {{-- About text content --}}
+    <div 
+      class="w-full md:w-6/12 {{ in_array($bgColor, $darkColors) ? 'text-white' : 'text-black' }}"
+      data-aos="fade-up"
+      data-aos-delay="300"
+    >
       @if(get_field('intro_headline'))
         <x-subtitle  
           class="{{ in_array($bgColor, $darkColors) ? 'text-white' : 'text-black' }}" 

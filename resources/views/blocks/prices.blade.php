@@ -16,9 +16,13 @@
   aria-label="{{ get_field('headline') }}"
   image="{{ get_field('background_image') }}"
 >
-  <x-content-wrapper class="w-full relative z-10">
+  <x-content-wrapper 
+    class="w-full relative z-10"
+    data-aos="fade-up"
+    data-aos-delay="300"
+  >
 
-    {{-- CTA content --}}
+    {{-- Prices text content --}}
     <div class="max-w-[1000px] mx-auto text-center">
       @if(get_field('intro_headline'))
         <x-subtitle text="{{ get_field('intro_headline') }}" />

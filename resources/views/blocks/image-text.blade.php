@@ -17,7 +17,11 @@
   class="hero bg-red py-14 md:py-24"
   aria-label="{{ get_field('intro_headline') }}"
 >
-  <x-content-wrapper class="md:flex md:items-center {{ $imagePosition === 'left' ? '' : 'md:flex-row-reverse' }}">
+  <x-content-wrapper 
+    class="md:flex md:items-center {{ $imagePosition === 'left' ? '' : 'md:flex-row-reverse' }}"
+    data-aos="fade-up"
+    data-aos-delay="300"
+  >
 
     {{-- Image content --}}
     <div class="w-full md:w-5/12 {{ $imagePosition === 'left' ? 'md:mr-auto' : 'md:ml-auto' }} pb-7 md:pb-0">

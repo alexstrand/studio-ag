@@ -15,7 +15,11 @@
   class="cta bg-white py-14 md:py-24 overflow-hidden"
   aria-label="{{ get_field('intro_headline') }}"
 >
-  <x-content-wrapper class="text-center w-full relative z-10">
+  <x-content-wrapper 
+    class="text-center w-full relative z-10"
+    data-aos="fade-up"
+    data-aos-delay="300"  
+  >
 
     {{-- FAQ intro --}}
     <div class="max-w-[1000px] mx-auto">

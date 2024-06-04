@@ -18,7 +18,11 @@
   <x-content-wrapper class="flex items-center">
 
     {{-- Hero text content --}}
-    <div class="w-full md:w-6/12 text-black">
+    <div 
+      class="w-full md:w-6/12 text-black"
+      data-aos="fade-up"
+      data-aos-delay="300"
+    >
 
       <div class="w-full flex items-center md:block">
         @if($headline = get_field('headline') ?? null)
@@ -66,7 +70,11 @@
     </div>
 
     {{-- Hero image content desktop --}}
-    <div class="w-full hidden md:block md:w-5/12 md:ml-auto">
+    <div 
+      class="w-full hidden md:block md:w-5/12 md:ml-auto"
+      data-aos="fade-up"
+      data-aos-delay="400"
+    >
       @if(get_field('image'))
         <x-image 
           image="{{ get_field('image') }}"
