@@ -1,6 +1,8 @@
 <!doctype html>
 <html @php(language_attributes())>
   <head>
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="9a568de0-8961-40ba-8c38-788137663328"  type="text/javascript"></script>
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ERMHLT283W"></script>
     <script>
