@@ -7,7 +7,10 @@
     </a>
   
     @if (has_nav_menu('primary_navigation'))
-      <nav class="nav-primary bg-beige md:bg-transparent fixed md:relative top-0 right-0 bottom-0 left-0 md:flex md:flex-row md:justify-between md:items-center md:flex-1" aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}">
+      <nav 
+        class="nav-primary bg-beige md:bg-transparent fixed md:relative top-0 right-0 bottom-0 left-0 md:flex md:flex-row md:justify-between md:items-center md:flex-1" 
+        aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}"
+      >
         {!! wp_nav_menu([
           'theme_location' => 'primary_navigation',
           'menu_class' => 'nav flex flex-col md:flex-row items-center',
@@ -16,12 +19,22 @@
       </nav>
     @endif
 
-    {{-- Hamburger menu --}}
-    <button id="hamburger-trigger" class="block md:hidden tham tham-e-spin tham-w-6">
-      <div class="tham-box">
-        <div class="tham-inner" />
+    <div class="flex items-center space-x-4 md:hidden">
+      {{-- Mobile header button --}}
+      <div class="">
+        <x-button 
+          text="Boka samtal"
+          url="#"
+        />
       </div>
-    </button>
+
+      {{-- Hamburger menu --}}
+      <button id="hamburger-trigger" class="tham tham-e-spin tham-w-6">
+        <div class="tham-box">
+          <div class="tham-inner" />
+        </div>
+      </button>
+    </div>
 
   </x-content-wrapper>
 </header>

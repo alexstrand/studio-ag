@@ -13,7 +13,7 @@
   <!-- Slider main container -->
   <div {{ $attributes->merge(['class' => 'swiper overflow-y-visible swiper-'.$uniqueID]) }}>
     <!-- Additional required wrapper -->
-    <ul class="swiper-wrapper flex lg:justify-center">
+    <ul class="swiper-wrapper">
       {!! $slot !!}
     </ul>
     <!-- If we need pagination -->
@@ -38,7 +38,7 @@
       clickable: true
     },
     breakpoints: {
-      768: {
+      992: {
         slidesPerView: {{ $slidesPerView }},
         spaceBetween: {{ $spaceBetween }},
         centeredSlides: {{ $centerMode }},

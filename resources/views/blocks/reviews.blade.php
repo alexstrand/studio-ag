@@ -27,7 +27,7 @@
         <x-subtitle text="{{ get_field('intro_headline') }}" />
       @endif
 
-      <h2 class="pb-7">{{ get_field('intro_headline') }}</h2>      
+      <h2 class="pb-7">{{ get_field('headline') }}</h2>      
     </div>
 
     {{-- Reviews --}}
@@ -43,30 +43,35 @@
 
         @if($reviews)
           @foreach($reviews as $key => $value)
-            <li class="swiper-slide review text-black pt-16 pr-8 pb-8 pl-8 relative [&.swiper-slide-active]:bg-beige [&.swiper-slide-active]:rounded [&.swiper-slide-active]:shadow-lg transition-all duration-300">            
-              <div class="absolute top-6 left-6">
-                <i class="fa-solid fa-quote-right text-green text-[2.5rem]"></i>
-              </div>
-              
-              <p class="pl-8">{!! $value['text'] !!}</p>
-
-              <div class="pt-7">
-                <div class="flex justify-start items-center">
-
-                  @php($image = $value['image'] ?? null)
-
-                  @if($image)
-                    <div class="w-4/12 rounded-full overflow-hidden">
-                      <x-image image="{{ $image }}"/>
-                    </div>
-                  @endif
-
-                  <div class="{{ $image ? 'pl-7' : '' }}">
-                    <h5>{{ $value['name'] }}</h5>
-                    <p>{{ $value['title'] }}</p>
-                  </div>
+            <li class="swiper-slide group review h-auto flex items-start">            
+              <div @class([
+                'text-black pt-16 pr-8 pb-8 pl-8 relative transition-all duration-300',
+                'group-[&.swiper-slide-active]:bg-beige group-[&.swiper-slide-active]:rounded group-[&.swiper-slide-active]:shadow-lg'
+              ])>
+                <div class="absolute top-6 left-6">
+                  <i class="fa-solid fa-quote-right text-green text-[2.5rem]"></i>
                 </div>
-
+                
+                <p class="pl-8">{!! $value['text'] !!}</p>
+  
+                <div class="pt-7">
+                  <div class="flex justify-start items-center">
+  
+                    @php($image = $value['image'] ?? null)
+  
+                    @if($image)
+                      <div class="w-4/12 rounded-full overflow-hidden shrink-0 border-2 border-green">
+                        <x-image image="{{ $image }}"/>
+                      </div>
+                    @endif
+  
+                    <div class="{{ $image ? 'pl-7' : '' }}">
+                      <h5 class="!text-2xl">{{ $value['name'] }}</h5>
+                      <p>{{ $value['title'] }}</p>
+                    </div>
+                  </div>
+  
+                </div>
               </div>
             </li>
           @endforeach
