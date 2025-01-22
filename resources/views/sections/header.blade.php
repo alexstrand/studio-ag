@@ -1,3 +1,8 @@
+@php
+  $mobile_header_link_title = get_field('mobile_header_link', 'options')['title'] ?? null;
+  $mobile_header_link_url = get_field('mobile_header_link', 'options')['url'] ?? null;
+@endphp
+
 <header id="header" class="banner w-full bg-beige flex items-center fixed z-[100] left-0 {{ is_user_logged_in() ? 'top-[46px] md:top-8' : 'top-0' }} [&.scrolled]:bg-beige py-4 md:py-7 [&.scrolled]:md:py-4 transition-all duration-300">
   <x-content-wrapper class="w-full flex items-center justify-between md:justify-start">
     <a class="brand relative z-10 md:mr-16 transition-all duration-300" href="{{ home_url('/') }}">
@@ -21,12 +26,12 @@
 
     <div class="flex items-center space-x-4 md:hidden">
       {{-- Mobile header button --}}
-      <div class="">
+      @if ($mobile_header_link_title && $mobile_header_link_url)
         <x-button 
-          text="Boka samtal"
-          url="#"
+          :text="$mobile_header_link_title"
+          :url="$mobile_header_link_url"
         />
-      </div>
+      @endif
 
       {{-- Hamburger menu --}}
       <button id="hamburger-trigger" class="tham tham-e-spin tham-w-6">

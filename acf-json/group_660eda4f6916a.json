@@ -109,6 +109,23 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_67912186a2b2a",
+            "label": "Mobile header link",
+            "name": "mobile_header_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
         }
     ],
     "location": [
@@ -129,5 +146,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1713710373
+    "modified": 1737564577
 }
